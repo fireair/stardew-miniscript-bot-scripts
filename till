@@ -1,67 +1,67 @@
-areaheight = 12
-areawidth = 14
+areaheight = 9
+areawidth = 9
 hoe = "Hoe"
-fertilizer = "Deluxe Fertilizer"
-seeds = "Strawberry Seeds"
+fertilizer = "Basic Fertilizer"
+seeds = "Mixed Seeds"
 scythe = "Scythe"
 
 if bot.facing == 0 then
-       bot.right
-       bot.right
-      
-       else if bot.facing == 1 then
-       bot.right
- 
-       else if bot.facing == 3 then
-       bot.left
-   end if
+bot.right
+bot.right
+
+else if bot.facing == 1 then
+bot.right
+
+else if bot.facing == 3 then
+bot.left
+end if
 for j in range(1,areawidth)
 
-  for i in range(1,areaheight)
-     bot.select "Hoe"
-     bot.useTool
-     bot.select "Deluxe Fertilizer"
-     bot.placeItem
-     bot.select "Strawberry Seeds"
-     bot.placeItem
-     bot.select "Scythe"
-     bot.useTool
-     bot.forward
-  end for
-    if bot.facing == 0 then
-     bot.right
-     bot.select "Hoe"
-     bot.useTool
-     bot.select "Deluxe Fertilizer"
-     bot.placeItem
-     bot.select "Strawberry Seeds"
-     bot.placeItem
-     bot.select "Scythe"
-     bot.useTool
-     bot.forward
-     bot.right
-    else if bot.facing == 2 then
-     bot.left
-     bot.select "Hoe"
-     bot.useTool
-     bot.select "Deluxe Fertilizer"
-     bot.placeItem
-     bot.select "Strawberry Seeds"
-     bot.placeItem
-     bot.select "Scythe"
-     bot.useTool
-     bot.forward
-     bot.left
-    end if
-  end for
-  if bot.facing == 2 then
-  bot.left
-  bot.left
-  end if
-for h in range(1,areaheight)
-  bot.forward
+for i in range(1,areaheight)
+bot.select hoe
+bot.useTool
+bot.select fertilizer
+bot.placeItem
+bot.select seeds
+bot.placeItem
+bot.select scythe
+bot.useTool
+bot.forward
 end for
-bot.turn left
+if bot.facing == 0 then
+bot.right
+bot.select hoe
+bot.useTool
+bot.select fertilizer
+bot.placeItem
+bot.select seeds
+bot.placeItem
+bot.select scythe
+bot.useTool
+bot.forward
+bot.right
+else if bot.facing == 2 then
+bot.left
+bot.select hoe
+bot.useTool
+bot.select fertilizer
+bot.placeItem
+bot.select seeds
+bot.placeItem
+bot.select scythe
+bot.useTool
+bot.forward
+bot.left
+end if
+end for
+if bot.facing == 2 then
+bot.left
+bot.left
+end if
+for h in range(1,areaheight)
+bot.forward
+end for
+bot.left
 for w in range (1,areawidth)
- bot.forward
+bot.forward
 end for
