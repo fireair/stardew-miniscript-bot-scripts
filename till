@@ -1,0 +1,30 @@
+areaheight = 12
+areawidth = 3
+if bot.facing == 0 then
+       bot.right
+       bot.right
+      
+       else if bot.facing == 1 then
+       bot.right
+ 
+       else if bot.facing == 3 then
+       bot.left
+   end if
+for j in range(1,areawidth)
+
+  for i in range(1,areaheight)
+     bot.useTool 
+     bot.forward
+  end for
+    if bot.facing == 0 then
+    bot.right
+    bot.useTool
+    bot.forward
+    bot.right
+    else if bot.facing == 2 then
+    bot.left
+    bot.useTool
+    bot.forward
+    bot.left
+    end if
+  end for
